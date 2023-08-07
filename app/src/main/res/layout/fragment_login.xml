@@ -64,17 +64,21 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/btnRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:padding="4dp"
                 android:textColor="@color/white"
-                android:text="Recuperar conta" />
+                android:text="Criar conta" />
 
             <TextView
+                android:id="@+id/btnRecoverAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Criar conta"
+                android:text="Recuperar conta"
+                android:padding="4dp"
                 android:textColor="@color/white"
                 android:textAlignment="textEnd" />
 
@@ -85,6 +89,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_gravity="center"
+            android:visibility="invisible"
+            tools:visibility="visible"
             android:indeterminateTint="@color/white"/>
 
     </LinearLayout>
