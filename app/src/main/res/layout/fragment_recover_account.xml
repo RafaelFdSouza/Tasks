@@ -14,9 +14,24 @@
         android:orientation="vertical">
 
 
-        <com.google.android.material.appbar.MaterialToolbar
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:navigationIcon="@drawable/ic_arrow_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Recuperar conta"
+                    android:textColor="@color/white" />
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
         <LinearLayout
@@ -47,6 +62,7 @@
                 android:layout_marginTop="16dp"/>
 
             <EditText
+                android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="48sp"
                 android:layout_marginVertical="4dp"
@@ -57,6 +73,7 @@
 
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRecover"
                 android:layout_width="match_parent"
                 android:layout_height="48sp"
                 android:layout_marginVertical="4dp"
@@ -67,6 +84,7 @@
 
 
             <ProgressBar
+                android:id="@+id/progress_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

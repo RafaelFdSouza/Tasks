@@ -1,10 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Tasks" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Tasks" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="android:windowBackground">@color/color_default</item>
+        <item name="android:statusBarColor">@color/color_default</item>
+
        <item name="colorPrimary">@color/color_default</item>
+    </style>
+    <style name="CustomTabLayout" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textSize">16sp</item>
+
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Theme.Tasks" parent="Base.Theme.Tasks" />
+
+<!--    BottomSheet-->
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>
