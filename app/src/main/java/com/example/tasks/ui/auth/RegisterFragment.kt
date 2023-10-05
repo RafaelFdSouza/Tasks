@@ -45,11 +45,11 @@ class RegisterFragment : Fragment() {
                 Toast.makeText(requireContext(), "Conta criada", Toast.LENGTH_SHORT).show()
                 //findNavController().navigate(R.id.action_global_homeFragment)
             } else {
-                showBottomSheet(message = R.string.password_empty_register_fragment)
+                showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
 
         } else {
-            showBottomSheet(message = R.string.email_empty_register_fragment)
+            showBottomSheet(message = getString(R.string.email_empty_register_fragment))
         }
     }
 

@@ -7,22 +7,43 @@
     <string name="status_task_done">Feitas</string>
 
     <!--    Login Fragment-->
-    <string name="txtEmail">Email</string>
-    <string name="txt_senha">Senha</string>
     <string name="txt_btn_login">Login</string>
     <string name="txt_btn_criar_conta">Criar conta</string>
     <string name="txt_btn_recuperar_conta">Recuperar conta</string>
+
     <!-- Generics-->
     <string name="txt_title_warning">Atenção</string>
     <string name="txt_button_warning">Entendi</string>
     <string name="email_empty">Digite seu email</string>
     <string name="password_empty">Digite sua senha</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_password">Senha</string>
 
     <!--    Register Fragment-->
     <string name="email_empty_register_fragment">Digite um email válido</string>
     <string name="password_empty_register_fragment">Crie uma senha</string>
+    <string name="txt_create_account">Criar conta</string>
 
-    <!--    Form Task Fragment-->
+
+    <!--    Recover Account-->
+    <string name="email_recover_account">Digite o endereço para recuperação de conta</string>
+    <string name="btn_send">Enviar</string>
+    <string name="edt_hint_recover_account">Digite seu email</string>
+    <string name="text_callout_recover_account">Informe seu email de cadastro para receber \n um link para redefinição de senha</string>
+    <string name="txt_recover_account">Recuperar conta</string>
+
+    <!--    Form Task -->
     <string name="description_empty">Insira uma tarefa</string>
+    <string name="txt_description">Descrição</string>
+    <string name="edt_description_task">Descreva sua tarefa</string>
+    <string name="txt_status">Status</string>
+    <string name="rdb_todo">A Fazer</string>
+    <string name="rdb_doing">Fazendo</string>
+    <string name="rdb_done">Feitas</string>
+    <string name="btn_save">Salvar</string>
+
+<!--    Fragment ToDo-->
+    <string name="fabtn_hint_add_task">Clique para adicionar tarefa</string>
+
 
 </resources>

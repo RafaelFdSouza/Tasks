@@ -28,7 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Recuperar conta"
+                    android:text="@string/txt_recover_account"
                     android:textColor="@color/white" />
             </com.google.android.material.appbar.MaterialToolbar>
         </com.google.android.material.appbar.AppBarLayout>
@@ -49,14 +49,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:text="Informe seu email de cadastro para receber \num link para redefinição de senha"
+                android:text="@string/text_callout_recover_account"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="@string/txt_email"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:layout_marginTop="16dp"/>
@@ -64,23 +64,23 @@
             <EditText
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
-                android:layout_height="48sp"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="4dp"
-                android:background="@drawable/bg_edit_text"
-                android:hint="Digite seu email"
+                style="@style/EditTextTheme"
+                android:hint="@string/edt_hint_recover_account"
                 android:inputType="textEmailAddress"
-                android:padding="8dp" />
+                android:autofillHints="@string/edt_hint_recover_account" />
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRecover"
                 android:layout_width="match_parent"
-                android:layout_height="48sp"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="4dp"
+                style="@style/BtnTheme"
                 android:background="@drawable/bg_button"
-                android:text="Enviar"
-                android:textColor="@color/color_default"
-                app:backgroundTint="@null" />
+                android:text="@string/btn_send"
+                />
 
 
             <ProgressBar

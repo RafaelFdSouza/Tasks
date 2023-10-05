@@ -50,7 +50,7 @@ class RecoverAccountFragment : Fragment() {
                 Toast.LENGTH_SHORT
             ).show()
         } else {
-            showBottomSheet(message = R.string.email_empty)
+            showBottomSheet(message = getString(R.string.email_recover_account))
         }
     }
 

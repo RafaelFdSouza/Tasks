@@ -20,24 +20,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txtEmail"
+            android:text="@string/txt_email"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="wrap_content"
             android:hint="@string/email_empty"
-            android:padding="8dp"
+            style="@style/EditTextTheme"
             android:layout_marginVertical="4dp"
-            android:background="@drawable/bg_edit_text"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:autofillHints="" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txt_senha"
+            android:text="@string/txt_password"
             android:layout_marginTop="4dp"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -45,20 +45,17 @@
         <EditText
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="wrap_content"
+            style="@style/EditTextTheme"
             android:hint="@string/password_empty"
-            android:padding="8dp"
             android:layout_marginVertical="4dp"
-            android:background="@drawable/bg_edit_text"
             android:inputType="textPassword" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
-            android:background="@drawable/bg_button"
-            app:backgroundTint="@null"
-            android:textColor="@color/color_default"
+            android:layout_height="wrap_content"
+            style="@style/BtnTheme"
             android:text="@string/txt_btn_login"
             android:layout_marginVertical="4dp"/>
 

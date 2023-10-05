@@ -40,7 +40,7 @@
               android:id="@+id/tvDescription"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="Descrição"
+              android:text="@string/txt_description"
               android:textColor="@color/white"
               android:textSize="20sp"
               app:layout_constraintStart_toStartOf="parent"
@@ -52,10 +52,9 @@
               android:layout_height="wrap_content"
               android:layout_marginTop="8dp"
               android:autofillHints=""
-              android:background="@drawable/bg_edit_text"
-              android:hint="Descreva sua tarefa"
+              android:hint="@string/edt_description_task"
               android:inputType="textMultiLine"
-              android:padding="16dp"
+              style="@style/EditTextTheme"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
@@ -65,7 +64,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginTop="16dp"
-              android:text="Status"
+              android:text="@string/txt_status"
               android:textColor="@color/white"
               android:textSize="20sp"
               app:layout_constraintStart_toStartOf="@+id/edtDescription"
@@ -84,7 +83,7 @@
                   android:layout_height="wrap_content"
                   android:layout_weight="1"
                   android:buttonTint="@color/white"
-                  android:text="A Fazer"
+                  android:text="@string/rdb_todo"
                   android:checked="true"
                   android:textColor="@color/white"
                   app:useMaterialThemeColors="false" />
@@ -95,7 +94,7 @@
                   android:layout_height="wrap_content"
                   android:layout_weight="1"
                   android:buttonTint="@color/white"
-                  android:text="Fazendo"
+                  android:text="@string/rdb_doing"
                   android:textColor="@color/white" />
 
               <RadioButton
@@ -104,7 +103,7 @@
                   android:layout_height="wrap_content"
                   android:layout_weight="1"
                   android:buttonTint="@color/white"
-                  android:text="Feitas"
+                  android:text="@string/rdb_done"
                   android:textColor="@color/white" />
 
           </RadioGroup>
@@ -115,7 +114,7 @@
               android:layout_height="48sp"
               android:layout_marginTop="16dp"
               android:background="@drawable/bg_button"
-              android:text="Salvar"
+              android:text="@string/btn_save"
               android:textColor="@color/color_default"
               app:backgroundTint="@null"
               app:layout_constraintStart_toStartOf="@+id/radioGroup"
