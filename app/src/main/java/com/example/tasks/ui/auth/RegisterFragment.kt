@@ -10,11 +10,15 @@ import com.example.tasks.R
 import com.example.tasks.databinding.FragmentRegisterBinding
 import com.example.tasks.utils.initToolbar
 import com.example.tasks.utils.showBottomSheet
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
-
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +30,9 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar(binding.toolbar)
+
+        auth = Firebase.auth
+
         initListener()
     }
 

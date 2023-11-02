@@ -29,22 +29,28 @@ class DoingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initRecyclerView(getTasks())
+        initRecyclerView()
+        getTasks()
     }
 
-    private fun initRecyclerView(taskList: List<Task>) {
-        taskAdapter = TaskAdapter(taskList)
+    private fun initRecyclerView() {
+        taskAdapter = TaskAdapter(requireContext())
 
-        binding.rvTasks.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvTasks.setHasFixedSize(true)
-        binding.rvTasks.adapter = taskAdapter
+        with(binding.rvTasks) {
+            layoutManager = LinearLayoutManager(requireContext())
+            setHasFixedSize(true)
+            adapter = taskAdapter
+        }
     }
 
-    private fun getTasks() = listOf(
-        Task(id = "0", "Estudando", Status.DOING),
-        Task(id = "1", "Revisando aulas", Status.DOING),
+    private fun getTasks() {
+        val taskList = listOf(
+            Task(id = "0", "Estudando", Status.DOING),
+            Task(id = "1", "Revisando aulas", Status.DOING)
+        )
 
-    )
+        taskAdapter.submitList(taskList)
+    }
 
 
     override fun onDestroyView() {

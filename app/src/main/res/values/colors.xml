@@ -5,6 +5,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF4C3B</color>
     <color name="green">#04D5C1</color>
+    <color name="color_btnNext">#23BDAF</color>
+
+    <color name="color_btnBack">#FF6E40</color>
 
 
 </resources>
