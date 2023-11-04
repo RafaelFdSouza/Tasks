@@ -6,13 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.tasks.R
 import com.example.tasks.databinding.FragmentRegisterBinding
 import com.example.tasks.utils.initToolbar
 import com.example.tasks.utils.showBottomSheet
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
@@ -49,8 +50,7 @@ class RegisterFragment : Fragment() {
 
         if (email.isNotEmpty()) {
             if (password.isNotEmpty()) {
-                Toast.makeText(requireContext(), "Conta criada", Toast.LENGTH_SHORT).show()
-                //findNavController().navigate(R.id.action_global_homeFragment)
+                registerUser(email, password)
             } else {
                 showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
@@ -58,6 +58,18 @@ class RegisterFragment : Fragment() {
         } else {
             showBottomSheet(message = getString(R.string.email_empty_register_fragment))
         }
+    }
+
+    private fun registerUser(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    findNavController().navigate(R.id.action_global_homeFragment)
+                } else {
+                    Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
     }
 
     override fun onDestroyView() {
